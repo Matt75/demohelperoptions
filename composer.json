@@ -1,0 +1,43 @@
+{
+    "type": "prestashop-module",
+    "name": "matt75/demohelperoptions",
+    "description": "PrestaShop module demohelperoptions",
+    "homepage": "https://github.com/Matt75/demohelperoptions",
+    "license": "AFL-3.0",
+    "authors": [
+        {
+            "name": "Matt75",
+            "email": "matthias.raigne@prestashop.com"
+        }
+    ],
+    "config": {
+        "platform": {
+            "php": "5.6.0"
+        },
+        "preferred-install": "dist",
+        "classmap-authoritative": true,
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "prepend-autoloader": false
+    },
+    "autoload": {
+        "classmap": [
+            "controllers",
+            "demohelperoptions.php"
+        ]
+    },
+    "scripts": {
+        "set-license-header": [
+            "@php ./vendor/bin/header-stamp --license=\"assets/afl.txt\" --exclude=\".github,node_modules,vendor\""
+        ],
+        "php-cs-fixer:check": [
+            "@php ./vendor/bin/php-cs-fixer fix --dry-run --diff"
+        ],
+        "php-cs-fixer:fix": [
+            "@php ./vendor/bin/php-cs-fixer fix"
+        ]
+    },
+    "require-dev": {
+        "prestashop/php-dev-tools": "^3.4"
+    }
+}
